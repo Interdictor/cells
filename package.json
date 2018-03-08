@@ -4,6 +4,7 @@
   "description": "game of life conrad",
   "main": "index.js",
   "scripts": {
+    "up": "http-server -p 4500",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
