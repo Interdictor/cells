@@ -1,0 +1,4 @@
+FROM node:8.9.4
+
+ENV PROJECT_PATH /opt/game_of_life/
+WORKDIR $PROJECT_PATH

@@ -1,0 +1,29 @@
+{
+  "name": "game_of_life",
+  "version": "0.0.0",
+  "description": "game of life conrad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/Interdictor/game_of_life_spa"
+  },
+  "devDependencies": {
+    "http-server": "0.11.1",
+    "mocha": "5.0.4",
+    "chai": "4.1.2"
+  },
+  "keywords": [
+    "game",
+    "of",
+    "life",
+    "conrad",
+    "Interdictor",
+    "node",
+    "vue"
+  ],
+  "author": "Interdictor",
+  "license": "WTFPL"
+}
