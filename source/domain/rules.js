@@ -1,6 +1,10 @@
 class Rules {
-  evaluate(arg) {
-    return 'dead'
+  evaluate(aliveCount) {
+    if(aliveCount == 3) {
+      return 'alive'
+    } else {
+      return 'dead'
+    }
   }
 }
 

@@ -10,10 +10,22 @@ describe('Game of life rules', function() {
     context('with zero alive neighbours', function() {
       it('does not resurrect', function() {
         const rules = new Rules()
+        const aliveNeighboursCount = 0
 
-        const result = rules.evaluate(0)
+        const result = rules.evaluate(aliveNeighboursCount)
 
         expect(result).to.eq('dead')
+      })
+    })
+
+    context('with three alive neighbours', function() {
+      it('resurrects', function() {
+        const rules = new Rules()
+        const aliveNeighboursCount = 3
+
+        const result = rules.evaluate(aliveNeighboursCount)
+
+        expect(result).to.eq('alive')
       })
     })
   })
