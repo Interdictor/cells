@@ -40,4 +40,18 @@ describe('Game of life rules', function() {
       })
     })
   })
+
+  context('given an alive cell', function() {
+    context('with only one alive neighbour', function() {
+      it('dies', function() {
+        const originalCellStatus = 'alive'
+        const rules = new Rules()
+        const aliveNeighboursCount = 1
+
+        const result = rules.evaluate(aliveNeighboursCount, originalCellStatus)
+
+        expect(result).to.eq('dead')
+      })
+    })
+  })
 });
