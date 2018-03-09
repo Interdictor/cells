@@ -28,5 +28,16 @@ describe('Game of life rules', function() {
         expect(result).to.eq('alive')
       })
     })
+
+    context('with four alive neighbours', function() {
+      it('does not resurrect', function() {
+        const rules = new Rules()
+        const aliveNeighboursCount = 4
+
+        const result = rules.evaluate(aliveNeighboursCount)
+
+        expect(result).to.eq('dead')
+      })
+    })
   })
 });
