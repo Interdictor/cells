@@ -3,7 +3,7 @@ const assertArrays = require('chai-arrays');
 const assert = require('chai').assert;
 const expect = require('chai').expect;
 
-const Rules = require('../source/domain/rules')
+const Rules = require('../public/javascript/domain/rules')
 
 describe('Game of life rules', function() {
   context('given a dead cell', function() {
