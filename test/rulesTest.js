@@ -53,5 +53,17 @@ describe('Game of life rules', function() {
         expect(result).to.eq('dead')
       })
     })
+
+    context('with exact two alive neighbours', function() {
+      it('does not die', function() {
+        const originalCellStatus = 'alive'
+        const rules = new Rules()
+        const aliveNeighboursCount = 2
+
+        const result = rules.evaluate(aliveNeighboursCount, originalCellStatus)
+
+        expect(result).to.eq('alive')
+      })
+    })
   })
 });
