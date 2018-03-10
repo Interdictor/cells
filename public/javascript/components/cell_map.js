@@ -1,5 +1,10 @@
 Vue.component('cell-map', {
   template: `
-    <span> cell map here! <cell></cell></span>
-  `
+    <ul>
+      <li v-for="cell in cells">
+        {{ cell }}
+      </li>
+    </ul>
+  `,
+  props: ['cells']
 })
