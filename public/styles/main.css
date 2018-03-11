@@ -1,0 +1,27 @@
+body {
+  background-color: #999894;
+}
+
+.gray {
+  background-color: #ccc8c4;
+}
+
+.square {
+  width: 12px;
+  height: 12px;
+  margin: 1px;
+}
+
+.cell-map {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 1250px;
+}
+
+.cell-map--container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

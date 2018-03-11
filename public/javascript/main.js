@@ -1,6 +1,6 @@
 new Vue({
   el: '#main',
   data: {
-    cell_descriptors: [1, 2, 3, 4, 5, 6, 7]
+    cell_descriptors: [...Array(4094).keys()]
   }
 })

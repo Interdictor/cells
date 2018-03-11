@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <title>Game of life</title>
   <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.14/vue.js"></script>
-  <div id="main">
+  <div id="main" class="cell-map--container">
     <cell-map :cells="cell_descriptors"></cell-map>
   </div>
   <script src="javascript/components/cell.js"></script>

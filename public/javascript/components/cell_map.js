@@ -1,8 +1,8 @@
 Vue.component('cell-map', {
   template: `
-    <ul>
+    <ul class="cell-map">
       <li v-for="cell in cells">
-        {{ cell }}
+        <div class="square gray"></div>
       </li>
     </ul>
   `,
