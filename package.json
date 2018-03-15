@@ -27,5 +27,8 @@
     "vue"
   ],
   "author": "Interdictor",
-  "license": "WTFPL"
+  "license": "WTFPL",
+  "dependencies": {
+    "npm": "^5.7.1"
+  }
 }
