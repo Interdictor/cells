@@ -1,5 +1,4 @@
-const chai = require('chai');
-const expect = require('chai').expect;
+const expect = require('chai').expect
 
 const Cell = require('../public/javascript/domain/cell')
 
