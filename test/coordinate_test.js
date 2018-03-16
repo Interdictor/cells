@@ -10,6 +10,11 @@ describe('Coordinate', function() {
     expect(coordinate.y).to.eq('y')
   })
 
+  it('cannot be instatiated without its values', function() {
+    expect(function() { new Coordinate('invalid_argument') }).to
+    .throw('Coordinate requires two values')
+  })
+
   it('may be compared with other coordinates', function() {
     const someCoordinate = new Coordinate(0, 0)
     const otherCoordinate = new Coordinate(1, 1)
