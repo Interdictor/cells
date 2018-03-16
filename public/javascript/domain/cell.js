@@ -1,5 +1,9 @@
 class Cell {
   constructor(coordinate) {
+    if(coordinate == undefined) {
+      throw 'Cell embraces a coordinate'
+    }
+
     this.coordinate = coordinate
   }
   isDead() {

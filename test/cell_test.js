@@ -6,7 +6,7 @@ const Coordinate = require('../public/javascript/domain/coordinate')
 
 describe('Cell', function() {
   it('is dead by default', function() {
-    const cell = new Cell()
+    const cell = new Cell('some_coordinate')
 
     let result = cell.isDead()
 
@@ -21,4 +21,5 @@ describe('Cell', function() {
     const result = cell.isAt(someCoordinate)
     expect(result).to.eq(true)
   })
+
 })
