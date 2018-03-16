@@ -22,4 +22,10 @@ describe('Cell', function() {
     expect(result).to.eq(true)
   })
 
+  it('binds itself to its neighbours', function() {
+    const cell = new Cell('someCoordinate')
+
+    const adjacents = ['someNeighbour', 'otherNeighbour']
+    expect( function() { cell.bind(adjacents) }).to.not.throw()
+  })
 })

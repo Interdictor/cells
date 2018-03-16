@@ -13,6 +13,10 @@ class Cell {
   isAt(particularCoordinate) {
     return this.coordinate.isTheSame(particularCoordinate)
   }
+
+  bind(vicinity) {
+    
+  }
 }
 
 module.exports = Cell
