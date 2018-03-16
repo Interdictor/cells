@@ -1,6 +1,4 @@
 const chai = require('chai');
-const assertArrays = require('chai-arrays');
-const assert = require('chai').assert;
 const expect = require('chai').expect;
 
 const Rules = require('../public/javascript/domain/rules')
