@@ -7,10 +7,7 @@ class Cell {
   }
 
   isAt(particularCoordinate) {
-    const isAtSameColumn = this.coordinate.x === particularCoordinate.x
-    const isAtSameRow = this.coordinate.y === particularCoordinate.y
-
-    return (isAtSameColumn && isAtSameRow)
+    return this.coordinate.isTheSame(particularCoordinate)
   }
 }
 
