@@ -1,7 +1,7 @@
 {
   "name": "game_of_life",
   "version": "0.0.0",
-  "description": "game of life conrad",
+  "description": "game of life of Conway",
   "main": "index.js",
   "scripts": {
     "up": "http-server -p 4500",
@@ -14,17 +14,15 @@
   "devDependencies": {
     "http-server": "0.11.1",
     "mocha": "5.0.4",
-    "chai": "4.1.2",
-    "chai-arrays": "^2.0.0"
+    "chai": "4.1.2"
   },
   "keywords": [
     "game",
     "of",
     "life",
-    "conrad",
+    "conway",
     "Interdictor",
-    "node",
-    "vue"
+    "node"
   ],
   "author": "Interdictor",
   "license": "WTFPL",
