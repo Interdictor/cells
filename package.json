@@ -12,9 +12,10 @@
     "url": "github.com/Interdictor/game_of_life_spa"
   },
   "devDependencies": {
+    "browserify": "^16.1.1",
+    "chai": "4.1.2",
     "http-server": "0.11.1",
-    "mocha": "5.0.4",
-    "chai": "4.1.2"
+    "mocha": "5.0.4"
   },
   "keywords": [
     "game",
