@@ -1,4 +1,4 @@
-const Tissue = require('../../public/javascript/domain/tissue')
+const Tissue = require('../../source/domain/tissue')
 
 describe('Tissue', function() {
   it('represents a conglomerate of cells', function() {

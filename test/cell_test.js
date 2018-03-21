@@ -1,7 +1,5 @@
-const expect = require('chai').expect
-
-const Cell = require('../public/javascript/domain/cell')
-const Coordinate = require('../public/javascript/domain/coordinate')
+const Cell = require('../source/domain/cell')
+const Coordinate = require('../source/domain/coordinate')
 
 
 describe('Cell', function() {

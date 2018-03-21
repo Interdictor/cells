@@ -1,6 +1,4 @@
-const expect = require('chai').expect
-
-const Coordinate = require('../public/javascript/domain/coordinate')
+const Coordinate = require('../source/domain/coordinate')
 
 describe('Coordinate', function() {
   it('represents a point in a bidimensional space', function() {

@@ -1,7 +1,4 @@
-const chai = require('chai');
-const expect = require('chai').expect;
-
-const Rules = require('../public/javascript/domain/rules')
+const Rules = require('../source/domain/rules')
 
 describe('Game of life rules', function() {
   context('given a dead cell', function() {
