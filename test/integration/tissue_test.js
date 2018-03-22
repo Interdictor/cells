@@ -1,17 +1,54 @@
 const Tissue = require('../../source/domain/tissue')
+const Coordinate = require('../../source/domain/coordinate')
+
 
 describe('Tissue', function() {
   it('represents a conglomerate of cells', function() {
     const tissue = new TestTissue(3, 3)
 
-    const result = tissue.exposeSize()
+    const size = tissue.exposeSize()
 
-    expect(result).to.eq(9)
+    expect(size).to.eq(9)
+  })
+
+  it('may be populated', function() {
+    const someCoordinate = new Coordinate(0, 0)
+    const anotherCoordinate = new Coordinate(1, 1)
+
+    const tissue = new TestTissue(2, 2)
+
+    tissue.populate(someCoordinate)
+    tissue.populate(anotherCoordinate)
+
+    expect(tissue.isAliveAt(new Coordinate(0, 0))).to.eq(true)
+    expect(tissue.isAliveAt(new Coordinate(1, 1))).to.eq(true)
+    expect(tissue.isAliveAt(new Coordinate(2, 2))).to.eq(false)
+  })
+
+  it('evolves into another tissue', function() {
+    const tissue = new Tissue(2, 2)
+
+    const evolvedTissue = tissue.evolve()
+
+    expect(evolvedTissue).to.be.instanceOf(Tissue)
+  })
+
+  it('evolves into next generation', function() {
+    const tissue = new Tissue(3, 3)
+    tissue.populate(new Coordinate(1, 0))
+    tissue.populate(new Coordinate(1, 1))
+    tissue.populate(new Coordinate(1, 2))
+
+    const nextTissue = tissue.evolve()
+
+    expect(nextTissue.population.size()).to.eq(3)
+    // expect(nextTissue.isAliveAt(new Coordinate(2, 0)))
   })
 })
 
 class TestTissue extends Tissue {
   exposeSize() {
-    return this.size
+    return this.width * this.length
+
   }
 }

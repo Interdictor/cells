@@ -14,6 +14,17 @@ class Coordinate {
 
     return xMatches && yMatches
   }
+
+  serialize() {
+    return `${this.x}/${this.y}`
+  }
+
+  static from(descriptor) {
+    const x = descriptor.split('/')[0]
+    const y = descriptor.split('/')[1]
+
+    return new Coordinate(x, y)
+  }
 }
 
 module.exports = Coordinate
