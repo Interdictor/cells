@@ -33,7 +33,7 @@ describe('Tissue', function() {
     expect(evolvedTissue).to.be.instanceOf(Tissue)
   })
 
-  it('evolves into next generation', function() {
+  xit('evolves into next generation', function() {
     const tissue = new Tissue(3, 3)
     tissue.populate(new Coordinate(1, 0))
     tissue.populate(new Coordinate(1, 1))
@@ -42,13 +42,24 @@ describe('Tissue', function() {
     const nextTissue = tissue.evolve()
 
     expect(nextTissue.population.size()).to.eq(3)
-    // expect(nextTissue.isAliveAt(new Coordinate(2, 0)))
+    expect(nextTissue.isAliveAt(new Coordinate(2, 0))).to.eq(true)
+  })
+
+  xit('have influenced coordinates', function() {
+    const tissue = new Tissue(2, 2)
+    tissue.populate(new Coordinate(0, 0))
+
+    const nextTissue = tissue.evolve()
+
+    expect(nextTissue.influencedPoints.size()).to.eq(3)
+    expect(nextTissue.wasInfluenced(Coordinate.new(0, 1))).to.eq(true)
+    expect(nextTissue.wasInfluenced(Coordinate.new(1, 0))).to.eq(true)
+    expect(nextTissue.wasInfluenced(Coordinate.new(1, 1))).to.eq(true)
   })
 })
 
 class TestTissue extends Tissue {
   exposeSize() {
     return this.width * this.length
-
   }
 }

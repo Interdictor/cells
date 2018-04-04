@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/Interdictor/game_of_life_spa"
+    "url": "github.com/Interdictor/cells"
   },
   "devDependencies": {
     "browserify": "^16.1.1",
